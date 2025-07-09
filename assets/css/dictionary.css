@@ -1,0 +1,325 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  margin-inline: auto;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  font-family: "Inconsolata", sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+ul, ol {
+  list-style: circle;
+}
+
+select {
+  width: 110px;
+  margin-right: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.dark-icon {
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: baseline;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+option {
+  background-color: white;
+  font-weight: bolder;
+}
+
+main {
+  padding-inline: 24px;
+}
+
+.search-bar {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding-block: 16px;
+  padding-left: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16.78px;
+  text-align: left;
+  color: rgba(45, 45, 45, 1);
+  background: url("../images/search-icon.svg") center no-repeat rgba(244, 244, 244, 1);;
+  background-position: right 5% center;
+}
+
+
+.search-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 23px 32px;
+}
+
+.search-area span {
+  color: rgba(164, 69, 237, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.run button {
+  border-radius: 50%;
+  padding: 13px;
+  background-color: rgba(164, 69, 237, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+
+/* switch */
+.switch {
+  appearance: none;
+  background-color: rgb(207, 216, 239);
+  height: 20px;
+  width: 35px;
+  display: inline-flex;
+  margin-top: 4px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 3px;
+  transition: all .8s ease-in-out;
+}
+
+.switch:after {
+  content: "";
+  background-color: white;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.switch:checked {
+  background-color: rgba(164, 69, 237, 1)
+}
+
+.switch:checked:after {
+  transform: translateX(100%);
+}
+
+h6 {
+  color: rgba(45, 45, 45, 1);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 23.04px;
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+ul {
+  color: rgba(117, 117, 117, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16.78px;
+  margin-bottom: 16px;
+}
+
+li {
+  color: rgba(45, 45, 45, 1);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-block: 13px;
+}
+
+li::marker {
+  color: rgba(143, 25, 232, 1);
+}
+
+.weird-area {
+  display: flex;
+  gap: 40px;
+  align-items: baseline;
+}
+
+.weird-area span {
+  color: rgba(117, 117, 117, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16.78px;
+}
+
+.synonyms-btn {
+  color: rgba(164, 69, 237, 1);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16.78px;
+  cursor: pointer;
+}
+
+p {
+  color: rgba(117, 117, 117, 1);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 13px;
+}
+
+
+footer {
+  margin-top: 60px;
+  padding-inline: 24px;
+}
+
+footer h5 {
+  color: rgba(117, 117, 117, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.92px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  margin-bottom: 7px;
+}
+
+footer a {
+color: rgba(45, 45, 45, 1);
+font-size: 14px;
+font-weight: 400;
+line-height: 17.92px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* dark mode */
+
+.dark-mode {
+
+  background: rgba(5, 5, 5, 1);
+  
+  h2,h6{
+    color: white;
+  }
+  li {
+    color: white;
+  }
+
+  .search-bar {
+    background-color: rgba(31, 31, 31, 1);
+    color: white;
+    border: 1px solid rgba(164, 69, 237, 1);
+  }
+
+  select {
+    background-color: transparent;
+    color: white;
+  }
+
+  option {
+    background-color: rgba(31, 31, 31, 1);
+  }
+  option:hover {
+    color: rgba(164, 69, 237, 1);
+  }
+
+  footer a {
+    color: white;
+  }
+}
+
+@media (width >= 768px) {
+  header {
+    padding-inline: 40px;
+  }
+  main {
+    padding-inline: 40px;
+  }
+  footer {
+    padding-inline: 40px;
+    display: flex;
+    gap: 25px;
+  }
+
+  .search-area h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 67.14px;
+  }
+
+  .search-area span {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    margin-top: 11px;
+  }
+
+  .run button {
+    padding: 27px;
+  }
+  .run img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .footer {
+    padding-bottom: 118px;
+  }
+}
+
+
+@media (width >= 1440px) {
+  body {
+    padding-inline: 352px;
+  }
+}
